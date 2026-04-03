@@ -1,0 +1,64 @@
+__Exercise 1:__ Use sum() to determine the sum of numbers from 2000 to 20000. Provide your code and the actual sum in your answer.
+
+```
+sum <- sum(2000:20000)
+sum
+```
+
+The total is 198011000
+
+__Exercise 2:__ In one or two sentences, describe what the above code snippet did.
+
+This code snippet assigns the variable a the number 5 and the variable b contains all the numbers between 2 and 20 inclusive, and then proceeds to print them to the console.
+
+__Exercise 3:__  Add the contents of a and b together and place the results in a new object. Examine the result. Include your code. Try using both sum() and +; do you get different results? If so, why?
+
+```
+a <- 5
+b <- 2:20
+total <- a + b
+summ <- sum(a, b)
+total
+summ
+```
+
+There are different results, using '+' adds 5 to each element in b, while sum() adds each element and then 5.
+
+__Exercise 4:__  What is the sum of the 5th through 10th element of object b? Provide your code and the sum.
+
+```
+sum(b[5:10])
+```
+
+The sum is 51
+
+__Exercise 5:__ What is the sum of the 3rd, 8th, and 10th element of b?
+
+```
+sum(b[c(3, 8, 10)])
+```
+
+The sum is 24
+
+__Exercise 6:__ When extracting from a 2-dimensional object, which number specifies rows and which specifies columns? What does m[3,] do? How can you extract the 3rd, 4th and 5th columns of m together as one object?
+
+The first number in the brackets specifies the row and the second specifies column.  m[3,] extracts the entire third row of the matrix.  To extract the third, fourth, and fifth column, use
+
+```
+m[,3:5]
+```
+
+__Exercise 7:__ What does the cbind command do? How about rbind? Create a new object “n” where the first row is a new row of numbers (your choice) and the following rows are the rows from matrix m. Optional: do the same but reverse the order of the rows from matrix m.
+
+cbind joines objects side by side and rbind stacks objects on top of each other
+
+
+```
+m <- matrix(data=1:25,ncol=5,byrow=T)
+m
+m[5,5]
+cbind(m,101:105)
+row <- c(10, 20, 30, 40, 50)
+n <- rbind(row, m)
+n
+```

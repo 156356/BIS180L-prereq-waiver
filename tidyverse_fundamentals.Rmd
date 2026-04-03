@@ -1,0 +1,12 @@
+
+library(tidyverse)
+
+heights <- read_csv("height_data_clean.csv")
+
+jan_data <- filter(heights, survey_date == "2023-01-27")
+
+grouped_data <- group_by(jan_data, pop)
+
+final_summary <- summarize(grouped_data, average_height = mean(height_cm))
+
+final_summary

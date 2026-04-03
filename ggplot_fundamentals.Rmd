@@ -1,0 +1,16 @@
+library(tidyverse)
+heights <- read_csv("height_data_clean.csv")
+
+heights$survey_date <- as.Date(heights$survey_date)
+
+plot_trend <- ggplot(data = heights, mapping = aes(x = survey_date, y = height_cm, color = pop))
+plot_trend <- plot_trend + geom_line(aes(group = plantID), alpha = 0.3)
+plot_trend <- plot_trend + labs(title = "Height Trend Over Time", x = "Date", y = "Height (cm)")
+plot_trend
+
+jan_27_data <- filter(heights, survey_date == "2023-01-27")
+
+plot_box <- ggplot(data = jan_27_data, mapping = aes(x = pop, y = height_cm, fill = pop))
+plot_box <- plot_box + geom_boxplot()
+plot_box <- plot_box + labs(title = "Height Distribution by Population (Jan 27, 2023)", x = "Population", y = "Height (cm)")
+plot_box
