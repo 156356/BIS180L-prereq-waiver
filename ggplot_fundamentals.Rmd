@@ -1,3 +1,5 @@
+
+```
 library(tidyverse)
 heights <- read_csv("height_data_clean.csv")
 
@@ -14,3 +16,4 @@ plot_box <- ggplot(data = jan_27_data, mapping = aes(x = pop, y = height_cm, fil
 plot_box <- plot_box + geom_boxplot()
 plot_box <- plot_box + labs(title = "Height Distribution by Population (Jan 27, 2023)", x = "Population", y = "Height (cm)")
 plot_box
+```

@@ -1,4 +1,4 @@
-
+```
 library(tidyverse)
 
 heights <- read_csv("height_data_clean.csv")
@@ -10,3 +10,4 @@ grouped_data <- group_by(jan_data, pop)
 final_summary <- summarize(grouped_data, average_height = mean(height_cm))
 
 final_summary
+```
