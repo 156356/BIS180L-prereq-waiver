@@ -1,6 +1,6 @@
 __Exercise 1:__ Use sum() to determine the sum of numbers from 2000 to 20000. Provide your code and the actual sum in your answer.
 
-```
+```{r}
 sum <- sum(2000:20000)
 sum
 ```
@@ -13,7 +13,7 @@ This code snippet assigns the variable a the number 5 and the variable b contain
 
 __Exercise 3:__  Add the contents of a and b together and place the results in a new object. Examine the result. Include your code. Try using both sum() and +; do you get different results? If so, why?
 
-```
+```{r}
 a <- 5
 b <- 2:20
 total <- a + b
@@ -26,7 +26,7 @@ There are different results, using '+' adds 5 to each element in b, while sum() 
 
 __Exercise 4:__  What is the sum of the 5th through 10th element of object b? Provide your code and the sum.
 
-```
+```{r}
 sum(b[5:10])
 ```
 
@@ -34,7 +34,7 @@ The sum is 51
 
 __Exercise 5:__ What is the sum of the 3rd, 8th, and 10th element of b?
 
-```
+```{r}
 sum(b[c(3, 8, 10)])
 ```
 
@@ -44,7 +44,7 @@ __Exercise 6:__ When extracting from a 2-dimensional object, which number specif
 
 The first number in the brackets specifies the row and the second specifies column.  m[3,] extracts the entire third row of the matrix.  To extract the third, fourth, and fifth column, use
 
-```
+```{r}
 m[,3:5]
 ```
 
@@ -53,7 +53,7 @@ __Exercise 7:__ What does the cbind command do? How about rbind? Create a new ob
 cbind joines objects side by side and rbind stacks objects on top of each other
 
 
-```
+```{r}
 m <- matrix(data=1:25,ncol=5,byrow=T)
 m
 m[5,5]

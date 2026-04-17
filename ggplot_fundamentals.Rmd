@@ -1,5 +1,5 @@
 
-```
+```{r}
 library(tidyverse)
 heights <- read_csv("height_data_clean.csv")
 
