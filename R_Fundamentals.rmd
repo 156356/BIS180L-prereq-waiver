@@ -45,6 +45,7 @@ __Exercise 6:__ When extracting from a 2-dimensional object, which number specif
 The first number in the brackets specifies the row and the second specifies column.  m[3,] extracts the entire third row of the matrix.  To extract the third, fourth, and fifth column, use
 
 ```{r}
+m <- matrix(data=1:25,ncol=5,byrow=T)
 m[,3:5]
 ```
 
